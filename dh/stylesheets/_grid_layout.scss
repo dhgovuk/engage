@@ -1,0 +1,96 @@
+@import '_conditionals.scss';
+@import '_measurements.scss';
+@import '_shims.scss';
+
+// Outer block sets a max width
+@mixin outer-block {
+  margin: 0 auto;
+  width: auto;
+  max-width: 960 + $gutter*2;
+  @extend %contain-floats;
+  @include ie-lte(8) {
+    width: 1020px;
+  }
+}
+
+// Outer block usage:
+//
+// .outer-block {
+//    @include outer-block;
+// }
+
+// Inner block sets either margin or padding
+// to align content with header and footer
+@mixin inner-block($margin-or-padding: padding) {
+  #{$margin-or-padding}-left: $gutter-half;
+  #{$margin-or-padding}-right: $gutter-half;
+  @include media(tablet) {
+    #{$margin-or-padding}-left: $gutter;
+    #{$margin-or-padding}-right: $gutter;
+  }
+}
+
+// Inner block usage:
+//
+// By default, inner block sets padding
+// .inner-block {
+//    @include inner-block;
+// }
+//
+// To set margins instead of padding:
+// .inner-block {
+//    @include inner-block(margin);
+// }
+.container {
+   @include outer-block;
+   padding: 0 15px;
+   width: 1020px\9;
+}
+.container-inner{
+  @include inner-block(margin);
+  @extend %contain-floats;
+}
+
+
+/**** !Grid ****/
+.grid-wrapper{
+  width: calc(100% + 30px);
+  @extend %contain-floats;
+  margin: 0 -15px;
+  display: flex;
+  align-items: stretch;
+  flex-flow: row wrap;
+}
+
+.section-row{
+  margin: 30px auto;
+  @extend %contain-floats;
+}
+.section-wrap{
+  @extend %contain-floats;
+}
+[class^="grid"]{
+  float: left;
+} 
+
+.grid-1-4{
+  width: $one-quarter;
+}
+.grid-1-3{
+  width: $one-third;
+}
+.grid-2-3{
+  width: $two-thirds;
+}
+.grid-3-3,
+.grid-2-2,
+.grid-1-1{
+  width: $full-width;
+}
+.grid-1-2{
+  width: $half;
+}
+.grid-centered{
+  margin: 0 auto;
+  float:none;
+}

@@ -1,0 +1,44 @@
+@include media(mobile){
+	
+	#twitter-feed,
+	.grid-wrapper{
+		margin-left:0;
+		margin-right:0;
+	}
+	#twitter-feed{
+		width:100%;
+	}
+	[class^="grid"],
+	.twitter-article{
+		width:100%;
+		flex: 1 100%;
+	}
+	[class^="block-"] {
+	margin: 15px 0 30px 0;
+	}
+	.twitter-article{
+		margin: 10px 0;
+	}
+	.search-box{
+		border-left: none;
+		padding: 40px 0 0 0;
+	}
+	.main-menu li{
+		margin: 5px 0;
+	}
+	.grid-wrapper{
+		margin: 0 auto;
+	}
+
+  input[type="submit"].search-btn {
+    top: 40px;
+  }
+  
+  .summary-widget .grid-2-3 {
+    padding: 1em 0 0 0;
+    border-top: 1px solid white;
+    border-left: none;
+    margin-top: 1em;
+    margin-left: 0;
+  }
+}

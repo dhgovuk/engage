@@ -1,0 +1,33 @@
+#so-panels-panels h3.hndle button {
+  height: 24px;
+  width: 24px;
+}
+
+#so-panels-panels .ui-button-icon-only .ui-icon {
+  margin-left: -4px;
+}
+
+#so-panels-panels .ui-button-icon-only .ui-icon,
+#so-panels-panels .ui-button-text-icon .ui-icon,
+#so-panels-panels .ui-button-text-icons .ui-icon,
+#so-panels-panels .ui-button-icons-only .ui-icon {
+  margin-top: -4px;
+}
+
+#so-panels-panels #panels .ui-button,
+#so-panels-panels #add-to-panels .ui-button {
+  height: 20px;
+}
+
+.panels-admin-dialog.ui-dialog .ui-dialog-titlebar-close {
+  overflow: hidden;
+  background: none;
+  height: 36px;
+  width: 36px;
+  border: none;
+  margin: -18px 0px 0px 0px;
+}
+
+.panels-admin-dialog.ui-dialog .ui-dialog-titlebar-close .ui-button-icon-primary {
+  top: 100%;
+}

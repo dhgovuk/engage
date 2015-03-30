@@ -1,0 +1,48 @@
+/*****tabs *******/
+.ui-tabs {
+	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	padding: .2em;
+}
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-bottom: 1px solid $grey-3;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	margin: 1px 0 0 0;
+	padding: 0;
+	white-space: nowrap;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	float: left;
+	padding: 0 1em;
+	margin: 0.5em 0;
+	text-decoration: none;
+	border-left: 1px solid $department-of-health;
+	outline: none;
+	text-decoration:underline;
+}
+.ui-tabs-nav li:first-child .ui-tabs-anchor{
+		border-left: none;
+	}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	border-bottom: 5px solid $department-of-health2;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+	cursor: text;
+}
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	padding: 1em 1.4em;
+	background: none;
+}

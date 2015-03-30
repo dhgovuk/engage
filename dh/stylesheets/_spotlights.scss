@@ -1,0 +1,37 @@
+/**** !spotlight ****/
+[class^="block-"]{
+	margin: 15px 15px 30px 15px;
+}
+.block-spotlight-button{
+	margin: 15px 15px 30px 15px;
+}
+.block-spotlight{
+	font-size: 16px;
+	blockquote{
+		margin:35px 0px 30px 14px;
+	}
+	.quote-author{
+		margin-top:5px;
+	}
+	h3{
+		margin-top: 10px;
+	}
+  img {
+    width: 100% !important;
+    height: auto;
+  }
+}
+.block-spotlight-text{
+	font-size: 16px;
+	border-top: 10px solid $department-of-health2;
+	ul{
+		margin:0.5em 0;
+	}
+	h3{
+		margin-top: 20px;
+	}
+}
+
+.block-inner li{
+	margin: 15px 0;
+}

@@ -1,0 +1,70 @@
+a{
+	color: #39836e;
+}
+.crest{
+	//border-left-color: #39836e;
+}
+.button-primary,
+input[type="submit"]{
+	background-color: #39836e;
+	box-shadow: 0 2px 0 #39836e;
+	-webkit-box-shadow: 0 2px 0 #39836e;
+	-moz-box-shadow: 0 2px 0 #39836e;
+}
+
+.button-primary:visited,
+input[type="submit"]:visited{
+	background-color: #39836e;
+}
+.button-primary:hover,
+.button-primary:focus,
+input[type="submit"]:hover,
+input[type="submit"]:visited {
+	background-color:#39836e;
+}
+.button-primary:active {
+	box-shadow: 0 0 0 #39836e;
+	-webkit-box-shadow: 0 0 0 #39836e;
+	-moz-box-shadow: 0 0 0 #39836e;
+}
+input[type="submit"].search-btn{
+	background-color: #39836e;
+}
+details summary{
+	color: #39836e;
+}
+blockquote:before, 
+blockquote:after{
+	color: #39836e;
+}
+.commnets-number{
+	background: #39836e;
+}
+
+.direction:before, 
+.direction:after {
+	    color: #39836e;
+}
+.twitter-text a,  h1 a {
+    color: #39836e;
+}
+.twitter-text a:hover,  h1 a:hover {
+    color:  #39836e;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	border-left-color: #39836e;
+}
+
+.block-spotlight-text{
+	border-top-color: #00ad93;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	border-bottom-color: #00ad93;
+}
+.related, .indented{
+	border-left-color: #00ad93;
+}
+.icon-twitter, .icon-facebook{
+	background: #39836e;
+}

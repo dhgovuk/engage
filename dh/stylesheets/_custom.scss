@@ -1,0 +1,267 @@
+/**** !uttilities ****/
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+.info {
+  background-image: url(images/comments-closed.png);
+  background-repeat: no-repeat;
+  padding-left: 44px;
+  background-position: 0 0;
+}
+
+.about-section{
+	padding: 0 20px;
+}
+.intro{
+	font-size:24px;
+}
+.keyline{
+	border-bottom: 1px solid $grey-3;
+	padding-bottom:15px;
+}
+.accepted, .rejected{
+	padding: 15px;
+	margin: 20px 0;
+	border-left: 3px solid $green;
+}
+.rejected{
+	border-left: 3px solid $red;
+}
+.related{
+	border-left: 5px solid $department-of-health2;
+	padding: 10px 0;
+	h2{
+		margin: 0 0  0 15px;
+	}
+	ul{
+		margin: 0.5em 0;
+	}
+}
+.area-inter{
+	border-left: 5px solid $department-of-health2;
+	padding: 0 15px;;
+}
+.indented{
+	margin: 30px 0;
+	padding:15px 0 15px 20px;
+	border-left: 5px solid $department-of-health2;
+}
+
+.sharelinks{
+	font-size: 16px;
+	
+	a{
+		margin-right: 15px;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	h3{
+		margin-bottom: 20px;
+	}
+}
+.direction{
+	margin: 2em 0;
+	a{
+		position: relative;
+		text-decoration:none;
+		padding: 0 20px;
+		&:hover{
+			text-decoration: underline;
+		}
+		&.next{
+			float: right;
+		}
+		&:before, &:after {
+	    border-right: 4px solid;
+	    content: '';
+	    display: block;
+	    height: 25px;
+	    margin-top: -19px;
+	    position: absolute;
+	    -moz-transform: rotate(135deg);
+	    -o-transform: rotate(135deg);
+	    -webkit-transform: rotate(135deg);
+	    transform: rotate(135deg);
+	    right: 0;
+	    top: 50%;
+	    width: 0;
+	    color: $department-of-health;
+		}
+	    &:after {
+		    margin-top: -4px;
+		    -moz-transform: rotate(45deg);
+		    -o-transform: rotate(45deg);
+		    -webkit-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		}
+
+		&:hover, &:focus,
+		&:hover:before, &:hover:after,
+		&:focus:before, &:focus:after {
+		    color: $black;
+		}
+		&.previous{
+
+			&:before{
+			left:0;
+			-moz-transform: rotate(-135deg);
+		    -o-transform: rotate(-135deg);
+		    -webkit-transform: rotate(-135deg);
+		    transform: rotate(-135deg);
+			}
+			&:after{
+			left:0;
+		    -moz-transform: rotate(-45deg);
+		    -o-transform: rotate(-45deg);
+		    -webkit-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
+			}
+		}
+	}
+}
+.question{
+	padding-bottom: 25px;
+	border-bottom: 1px solid $grey-2;
+	position:relative;
+	&:after, &:before{
+		position:absolute;
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		bottom: -15px;
+		left:48%;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 15px solid $grey-2;
+	}
+	&:after{
+		bottom: -14px;
+		border-top: 15px solid white;
+	}
+}
+.banner-image img{
+	width:100%;
+  height: auto;
+}
+
+.signup{
+	float:right;
+}
+
+/**** !Summary widget ****/
+
+.summary-widget {
+	padding: 1em;
+	background: #39836E;
+	color: white;
+	overflow: hidden;
+	@extend %contain-floats;
+	h2{
+		margin-top: 0;
+		padding: 0;
+	}
+	.grid-1-3 {
+    padding-right: 0.5em;
+    box-sizing: border-box;
+		p {
+			margin:0;
+		}
+	}
+	.grid-2-3 {
+		padding: 0 1em;
+		box-sizing: border-box;
+		border-left: 1px solid white;
+		margin-left: -1px;
+	}
+}
+
+.summary-date{
+	margin: 0;
+	font-weight: normal;
+}
+
+.news{
+	position: relative;
+	padding-bottom: 20px;
+	.small-text{
+		position: absolute;
+		bottom: 0;
+	}
+}
+#quick-text-filter{
+	margin-right: 3em;
+}
+
+//!Email sign up//
+.email-signup{
+	float:right;
+	float: right;
+	padding: 15px;
+	font-size: 0.8em;
+	color: white;
+}
+.email-label{
+	margin:0;
+}
+.signupform{
+	position: absolute;
+	width: 330px;
+	right: 0;
+	top: 2.5em;
+	background: #fff;
+	color: black;
+	padding: 1em;
+	box-shadow: 0px 0px 4px #666;
+	display: none;
+	z-index: 20;
+}
+.signup{
+	margin: 0.3em 0;
+	padding:5px 15px;
+}
+
+.close{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	&:hover{
+		color: $department-of-health;
+	}
+}
+.entry-content img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.block-free-image img {
+  width: 100%;
+  height: auto;
+}
+.more,
+.less{
+ font-size: 14px;
+}
+.custom-layout-entry-content 
+{
+  .section-row {
+    margin: 0 auto;
+  }
+  [class^="block-"] {
+    margin: 15px;
+  }
+}
+/**** !media quesries ****/
+@import 'mobile';

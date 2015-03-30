@@ -1,0 +1,362 @@
+body{
+	@include core-19;
+	color: $black;
+	margin:0;
+}
+h1, h2, h3, h4{
+	margin-bottom: 0;
+}
+h1{
+	@include heading-36;
+	@include bold-36;
+	margin:0;
+}
+h2{
+	@include heading-24;
+	@include bold-24;
+}
+h3{
+	@include core-19;
+	@include bold-19;
+}
+p{
+	margin: 0.5em 0;
+}
+a{
+	color: $department-of-health;
+}
+h3 	a{
+	text-decoration:none;
+	&:hover, &:focus{
+		text-decoration: underline;
+	}	
+}
+/*** !header  ***/
+.header-wrap{
+	background: $black;
+	color: $white;
+	border-bottom: 5px solid $department-of-health2;
+	overflow: hidden;
+}
+.crest{
+		display: inline-block;
+		float:left;
+
+	img{
+		padding: 10px 10px 5px 30px;
+		width: 35px;
+		}
+}
+.dep-title{
+	margin-top: 12px;
+	display: inline-block;
+	a{
+		color: $white;
+		text-decoration: none;
+	}
+}
+/*** !top section  ***/
+.wrapper-grey{
+	background: $grey-3;
+	overflow: hidden;
+	padding:30px;
+}
+.page-title{
+	@include bold-36;
+  padding-right: 1em;
+	a{
+		color: $black;
+		text-decoration: none;
+	}
+}
+.subheader{
+	@include heading-24;
+}
+/*** !breadcrumbs  ***/
+.breadcrumbs{
+	font-size: 14px;
+	ul{
+	list-style: none;
+	padding:0;
+	}
+	li{
+		display: inline-block;
+		padding: 0 6px;
+	}
+	a{
+		position:relative;
+		padding-right:10px;
+		&:before, &:after {
+	    border-right: 2px solid;
+	    content: '';
+	    display: block;
+	    height: 8px;
+	    margin-top: -6px;
+	    position: absolute;
+	    -moz-transform: rotate(135deg);
+	    -o-transform: rotate(135deg);
+	    -webkit-transform: rotate(135deg);
+	    transform: rotate(135deg);
+	    right: -5px;
+	    top: 50%;
+	    width: 0;
+	    color: $grey-2;
+		}
+	    &:after {
+		    margin-top: -1px;
+		    -moz-transform: rotate(45deg);
+		    -o-transform: rotate(45deg);
+		    -webkit-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		}
+
+		&:hover, &:focus,
+		&:hover:before, &:hover:after,
+		&:focus:before, &:focus:after {
+		    color: $black;
+		}
+	}
+}
+/*** !main menus  ***/
+.main-menu{
+	margin: 40px 0 0 0;
+	list-style:none;
+	padding:0;
+	clear: both;
+	font-size:16px;
+	font-weight: bold;
+  &.main-with-sub-menu {
+    float: left;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #bfc1c3;
+  }
+	a{
+		display: block;
+		color:black;
+		text-decoration: none;
+		border-left: 1px solid $grey-1;
+    margin-right: -1px;
+		&:hover, &:focus{
+			text-decoration: underline;
+		}
+	}
+  &.main-with-sub-menu li:first-child a,
+  &.sub-menu li:first-child a,
+  a {
+		padding: 5px 10px;
+  }
+  &.sub-menu li {
+    font-weight: normal;
+  }
+	li{
+		display: inline-block;
+    float: left;
+		&:first-child a{
+			border-left:none;
+			padding-left:0;
+		}
+		&.current-menu-item:first-child a,
+    &.current-menu-ancestor:first-child a{
+			padding: 5px 10px;
+		}
+		&.current-menu-item a,
+    &.current-menu-ancestor a{
+			border-bottom: 5px solid #00ad93;
+		}
+	}
+
+}
+/*** !footer links  ***/
+.footer-links{
+	@extend .main-menu;
+	font-size: 14px;
+	margin: 40px 0;
+}
+
+/**** !buttons ****/
+.button-primary,
+input[type="submit"]{
+  @include button($department-of-health);
+
+}
+.button-get-started,
+input[type="submit"].button-get-started{
+	background-image: url(images/icon-pointer.png);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	padding: 0.36842em 2.15789em 0.21053em 0.84211em;
+}
+
+/**** !font-size classes ****/
+.small-text{
+	@include core-14;
+	margin-top:15px;
+}
+.download-size{
+	@include core-14;
+	color: $grey-1;
+	margin-top:0;
+}
+.text-thin{
+	font-weight:normal;
+	color: $grey-1;
+}
+
+/*** !form elements ****/
+
+label{
+	display: block;
+	margin-top:25px;
+}
+textarea, input[type="text"]{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"]
+{
+	width: auto;
+	padding: 8px 20px;
+}
+
+.label-block{
+	display: block;
+	float: none;
+	clear: left;
+	position: relative;
+	background: $grey-3;
+	border: 1px solid $grey-3;
+	padding: 18px 30px 15px 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	}
+input{
+	font-size: 16px;
+	padding: 7px;
+	border: 1px solid $grey-2;
+	&:focus{
+		outline: 3px solid $yellow;
+	}
+}
+label.focused{
+	outline: 3px solid $yellow;
+	input{
+		outline: none;
+	}
+}
+.selected {
+	background: white;
+	border-color:$black;
+}
+
+/*** !search form elements ****/
+input[type="submit"].search-btn{
+	background: $department-of-health url('images/icon-search.png') no-repeat;
+	text-indent: -999px;
+	width: 34px;
+	height:34px;
+	background-position: 3px;
+	border: 1px solid $department-of-health;
+	margin: 0 0 0 -7px;
+	cursor: pointer;
+	padding:5px;
+	vertical-align:middle;
+	-webkit-box-shadow: 0 0 0 $department-of-health;
+	-moz-box-shadow: 0 0 0 $department-of-health;
+	box-shadow: 0 0 0 $department-of-health;
+	&:focus, &:active{
+		/*top:0;*/
+		outline: medium none;
+		-webkit-box-shadow: 0 0 0 $department-of-health;
+		-moz-box-shadow: 0 0 0 $department-of-health;
+		box-shadow: 0 0 0 $department-of-health;
+	}
+  
+  position: absolute;
+  top: 30px;
+  right: 1px;
+  z-index: 10;
+}
+.search-box{
+	margin:0;
+	height:34px;
+	padding: 30px 0 30px 30px;
+	border-left: 1px solid $grey-2;
+	vertical-align:middle;
+  position: relative;
+	input{
+		width: 260px\9;
+		width: 100%;
+    padding-right: 48px;
+    position: relative;
+    z-index: 5;
+    margin: 0px;
+    height: 34px;
+		&.search-btn{
+			width: 34px;
+		}
+	}
+}
+
+/*** !details - hidden text ****/
+details{
+	display:block;
+}
+details summary{
+	display:inline-block;
+	cursor: pointer;
+	color: $department-of-health;
+	&:focus{
+		outline: 3px solid $yellow;
+	}
+}
+details summary ~ * {
+    display: none;
+}
+
+details[open] summary ~ * {
+    display: block;
+}
+.summary{
+	text-decoration:underline;
+}
+
+/*** !blockquote ****/
+blockquote{
+	position:relative;
+	margin: 50px 0px 80px 30px;
+	&:before, &:after{
+		font-size: 40px;
+		clear: both;
+		color: $department-of-health;
+		position:absolute;
+	}
+	&:before {
+		float: left;
+		content: "\201C";
+		left:0;
+		top:-30px;
+	}
+	&:after{
+		float: right;
+		content: "\201D";
+		right:0;
+		bottom: -40px;
+	}
+}
+.quote-author{
+	float: right;
+	clear:right;
+	margin-top: -60px;
+	@include core-14;
+}
+.email-signup {
+  float: right;
+  float: right;
+  padding: 15px;
+  font-size: 0.8em;
+  color: white;
+}
