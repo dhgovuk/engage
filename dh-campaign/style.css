@@ -1,0 +1,14 @@
+/*
+ Theme Name:   DH Campaign
+ Description:  Child theme of the original Department of Health theme which introduces posts & features for creating campaigns sites
+ Author: Reading Room
+ Author URI:   http://www.readingroom.com
+ Template:     dh
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         responsive-layout, accessibility-ready
+ Text Domain: dh-campaign
+*/
+@import url('styles/vendor.css');
+@import url('styles/main.css');
